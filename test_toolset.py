@@ -30,7 +30,8 @@ async def add(a: int, b: int) -> int:
         "type": "int"
     }
     }"""
-    return a + b
+    # cast to ints to avoid float return
+    return int(a) + int(b)
 
 @external
 async def subtract(a: int, b: int) -> int:
