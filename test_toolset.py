@@ -52,7 +52,8 @@ async def subtract(a: int, b: int) -> int:
         "type": "int"
     }
     }"""
-    return a - b
+    # cast to ints to avoid float return
+    return int(a) - int(b)
 
 @external
 async def multiply(a: int, b: int) -> int:
@@ -73,7 +74,8 @@ async def multiply(a: int, b: int) -> int:
         "type": "int"
     }
     }"""
-    return a * b
+    # cast to ints to avoid float return
+    return int(a) * int(b)
 
 @external
 async def divide(a: int, b: int) -> float:
@@ -94,7 +96,8 @@ async def divide(a: int, b: int) -> float:
         "type": "float"
     }
     }"""
-    return a / b
+    # cast to ints to avoid float return
+    return float(a) / float(b)
 
 @external
 async def get_random_number() -> int:
